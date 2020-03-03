@@ -1,5 +1,6 @@
-package dev.maxc.shuffler.models.question
+package dev.maxc.shuffler.models.node
 
+import dev.maxc.shuffler.models.price.Price
 import dev.maxc.shuffler.models.users.Author
 import java.util.*
 
@@ -14,6 +15,5 @@ class Package(
     info: String = "",
     author: Author,
     uploadDate: Date,
-    purchaseCost: Double,
-    displayCost: Double = purchaseCost
+    price: Price
 ) : RecyclerDisplayModel(id, parentId, name, info, author, uploadDate, RecyclerNode.PACKAGE)
