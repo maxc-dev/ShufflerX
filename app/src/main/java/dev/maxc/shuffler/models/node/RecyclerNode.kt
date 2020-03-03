@@ -1,4 +1,4 @@
-package dev.maxc.shuffler.models.question
+package dev.maxc.shuffler.models.node
 
 /**
  * @author Max Carter
