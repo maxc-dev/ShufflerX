@@ -1,10 +1,10 @@
-package dev.maxc.shuffler.models.node
+package dev.maxc.shuffler.models.nodes
 
 /**
  * @author Max Carter
  * @since  03/03/2020
  */
-enum class RecyclerNode {
+enum class RecyclerNodeTypes {
     BUNDLE,
     PACKAGE,
     CATEGORY,

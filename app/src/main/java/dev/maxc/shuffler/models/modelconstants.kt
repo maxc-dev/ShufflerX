@@ -8,3 +8,7 @@ package dev.maxc.shuffler.models
 //when a node does not have a child/parent the default is -1
 const val NO_PARENT = -1
 const val NO_CHILD = -1
+
+const val NO_ICON = -1
+
+const val EMPTY_STRING = ""
