@@ -1,5 +1,6 @@
 package dev.maxc.shuffler
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,6 +12,7 @@ import dev.maxc.shuffler.models.nodes.RecyclerNode
 import dev.maxc.shuffler.models.price.Price
 import dev.maxc.shuffler.models.users.Author
 import dev.maxc.shuffler.ui.popular.PackageAdapter
+import dev.maxc.shuffler.ui.setup.SetupActivity
 import java.util.*
 
 class MainActivity : AppCompatActivity() {

@@ -52,6 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description"
+            android:layout_marginStart="4dp"
             android:padding="4dp"
             android:textAlignment="viewStart"
             android:textColor="@color/colorOnSurfaceSub"
@@ -59,7 +60,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/node_author" />
 
-
+<!--
         <Button
             android:id="@+id/node_info"
             style="@style/SurfaceButton"
@@ -67,14 +68,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/node_desc" />
-
+-->
         <Button
             android:id="@+id/node_start"
             style="@style/SurfaceButton"
             android:text="@string/shuffle"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/node_info"
-            app:layout_constraintTop_toBottomOf="@id/node_desc" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/node_desc"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

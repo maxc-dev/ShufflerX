@@ -21,4 +21,20 @@
         <item name="android:background">@color/colorSurface</item>
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Toolbar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/colorOnBackground</item>
+        <item name="android:textColorSecondary">@color/colorOnSurface</item>
+        <item name="actionMenuTextColor">@color/colorOnBackground</item>
+    </style>
+
+    <style name="TextOnBackground">
+        <item name="android:textColor">@color/colorOnBackground</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>

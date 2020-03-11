@@ -28,7 +28,8 @@ class PackageAdapter(private val context: Context, nodes: ArrayList<RecyclerNode
             LayoutInflater.from(parent.context).inflate(
                 R.layout.node_bundle,
                 parent, false
-            )
+            ),
+            context
         )
     }
 
