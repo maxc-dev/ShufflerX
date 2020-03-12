@@ -37,4 +37,9 @@
         <item name="android:textColor">@color/colorOnBackground</item>
         <item name="android:textSize">14sp</item>
     </style>
+
+    <style name="TextOnSurface">
+        <item name="android:textColor">@color/colorOnSurface</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>
