@@ -1,7 +1,7 @@
 package dev.maxc.shuffler
 
-import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +12,6 @@ import dev.maxc.shuffler.models.nodes.RecyclerNode
 import dev.maxc.shuffler.models.price.Price
 import dev.maxc.shuffler.models.users.Author
 import dev.maxc.shuffler.ui.popular.PackageAdapter
-import dev.maxc.shuffler.ui.setup.SetupActivity
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -30,51 +29,56 @@ class MainActivity : AppCompatActivity() {
         recycler.setHasFixedSize(true)
         recycler.layoutManager = LinearLayoutManager(this)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
-        navView.setOnNavigationItemSelectedListener { item ->
-            supportActionBar?.title = when (item.itemId) {
-                R.id.navigation_popular -> initPopular()
-                R.id.navigation_discover -> initDiscover()
-                R.id.navigation_library -> initLibrary()
-                else -> initHome()
+
+        navView.setOnNavigationItemSelectedListener {
+            listOf(
+                NavOption(getString(R.string.title_home), findViewById(R.id.navigation_home)) { initHome() },
+                NavOption(getString(R.string.title_popular), findViewById(R.id.navigation_popular)) { initPopular() },
+                NavOption(getString(R.string.title_discover), findViewById(R.id.navigation_discover)) { initDiscover() },
+                NavOption(getString(R.string.title_library), findViewById(R.id.navigation_library)) { initLibrary() }
+            ).forEach { option ->
+                if (it.itemId == option.view.id) {
+                    supportActionBar?.title = option.title
+                    option.direct.invoke()
+                    return@setOnNavigationItemSelectedListener true
+                }
             }
             true
         }
+
         if (savedInstanceState == null) {
             initHome()
         }
     }
 
+    //holder class for the bottom nav options
+    data class NavOption(val title: String, val view: View, val direct: () -> Unit)
+
     //home: list of varied card views
-    private fun initHome(): String {
+    private fun initHome() {
         //todo(
         // create card view for home components
         // create a new adapter
         // link to main activity recycler view
         // )
-        return getString(R.string.title_home)
     }
 
     //popular: just displays the most downloaded within 24 hours
-    private fun initPopular(): String {
+    private fun initPopular() {
         if (adapterPackageLister == null) {
             adapterPackageLister = PackageAdapter(this, initDummyList())
         }
         if (recycler.adapter != adapterPackageLister) {
             recycler.adapter = adapterPackageLister
         }
-        return getString(R.string.title_popular)
     }
 
     //discover: search bar + filters
-    private fun initDiscover(): String {
-
-        return getString(R.string.title_discover)
+    private fun initDiscover() {
     }
 
     //library: user's own library
-    private fun initLibrary(): String {
-
-        return getString(R.string.title_library)
+    private fun initLibrary() {
     }
 
     //todo(
@@ -82,9 +86,9 @@ class MainActivity : AppCompatActivity() {
     // in a new non blocking coroutine to resolve the slight
     // lag in animation from the nav bar
     // )
-    private fun initAdapter(adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>) {
+/*    private fun initAdapter(adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>) {
 
-    }
+    }*/
 
     private fun initDummyList(): ArrayList<RecyclerNode> {
         val author = Author("max", "Mr", "Max", "Carter")

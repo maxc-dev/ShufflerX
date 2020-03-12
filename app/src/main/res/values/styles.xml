@@ -12,7 +12,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:foreground">?attr/selectableItemBackground</item>
@@ -33,6 +33,11 @@
         <item name="actionMenuTextColor">@color/colorOnBackground</item>
     </style>
 
+    <style name="TextTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <style name="TextOnBackground">
         <item name="android:textColor">@color/colorOnBackground</item>
         <item name="android:textSize">14sp</item>
@@ -41,5 +46,47 @@
     <style name="TextOnSurface">
         <item name="android:textColor">@color/colorOnSurface</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="OptionGrid">
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:layout_marginStart">@dimen/grid_margin</item>
+        <item name="android:layout_marginEnd">@dimen/grid_margin</item>
+        <item name="android:layout_marginBottom">@dimen/grid_margin</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">5dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="OptionGrid.Selected">
+        <item name="cardBackgroundColor">@color/colorSelected</item>
+        <item name="rippleColor">@color/colorSelectedRipple</item>
+    </style>
+
+    <style name="OptionGrid.Unselected">
+        <item name="cardBackgroundColor">@color/colorUnselected</item>
+        <item name="rippleColor">@color/colorUnselectedRipple</item>
+    </style>
+
+    <style name="OptionGridText">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorOnSurface</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="OptionNumberPicker">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColorPrimary">@color/colorOnSurface</item>
+        <item name="android:divider">@color/colorOnSurfaceSub</item>
     </style>
 </resources>

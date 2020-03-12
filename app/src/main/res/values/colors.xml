@@ -11,4 +11,9 @@
     <color name="colorSecondary">#EE6402</color>
     <color name="colorOnPrimary">#121212</color>
     <color name="colorOnSecondary">#121212</color>
+
+    <color name="colorSelected">#34A834</color>
+    <color name="colorSelectedRipple">#288028</color>
+    <color name="colorUnselected">#A61A1A</color>
+    <color name="colorUnselectedRipple">#8E1616</color>
 </resources>

@@ -2,6 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setup_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -40,14 +41,14 @@
     <include layout="@layout/content_setup" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_start"
+        android:id="@+id/setup_fab_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@id/setup_app_bar"
         app:layout_anchorGravity="bottom|end"
-        app:backgroundTint="@color/colorSecondary"
-        android:backgroundTint="@color/colorSecondary"
+        app:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
         app:srcCompat="@drawable/ic_play_24dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
